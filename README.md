@@ -41,7 +41,7 @@ The dependent variable is 'dependent' on the independent variable. As the experi
 
 Independent and dependent variables always go on the same places in a graph. This makes it easy for you to quickly see which variable is independent and which is dependent when looking at a graph or chart. The independent variable always goes on the x-axis, or the horizontal axis. For the height weight data that we have been seeing , a scatter plot may look as shown below. Here we have set height as independant and weight as a dependent variable i.d. we want to study if height has some effect on weight:
 
-<img  src ="https://onlinecourses.science.psu.edu/stat500/sites/onlinecourses.science.psu.edu.stat500/files/lesson12/scatterplot_mtb_01/index.png" width=400>
+![](https://onlinecourses.science.psu.edu/stat500/sites/onlinecourses.science.psu.edu.stat500/files/lesson12/scatterplot_mtb_01/index.png)
 
 ## A Statistical Model 
 
