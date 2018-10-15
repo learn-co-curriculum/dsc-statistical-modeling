@@ -1,18 +1,20 @@
 
 # Statistical Learning Theory
 
+## Introduction
+
 This lesson will introduce you to the basics of statistical learning theory and some key components in the framework of this theory. The is particularly important and all the machine learning approaches that we will come across later are built upon the ideas of statistical machine learning. 
 
-### Objectives
+## Objectives
 
 You will be able to: 
 
 * Understand and describe the statistical learning theory 
 * Understand dependent and independent variables as key components of statistical learning approaches
-* Give an introduction on model development and model parameters. 
+* Give an introduction on model development and model parameters
 * Demonstrate a basic understanding of ideas of model loss and model validation
 
-### Introduction
+## Statistical Learning
 
 > Statistical learning theory is a framework for machine learning drawing from the fields of statistics and functional analysis. Statistical learning theory deals with the problem of finding a predictive function based on data. **The goal of statistical learning theory is to study, in a statistical framework, the properties of learning algorithms.**
 
@@ -22,7 +24,7 @@ Statistical learning theory has led to successful applications in fields such as
 
 So how do we get started on this? what does it involve? Statistical learning refers to tools and techniques that enable us to investigate and understand data in a better way. Let's see what this involves:
 
-#### Types of data in statistical learning 
+## Types of data in statistical learning 
 
 In the context of Statistical learning, there are two types of data:
 
@@ -41,7 +43,7 @@ The dependent variable is 'dependent' on the independent variable. As the experi
 
 Independent and dependent variables always go on the same places in a graph. This makes it easy for you to quickly see which variable is independent and which is dependent when looking at a graph or chart. The independent variable always goes on the x-axis, or the horizontal axis. For the height weight data that we have been seeing , a scatter plot may look as shown below. Here we have set height as independant and weight as a dependent variable i.d. we want to study if height has some effect on weight:
 
-![](scatter.png)
+<img  src ="https://onlinecourses.science.psu.edu/stat500/sites/onlinecourses.science.psu.edu.stat500/files/lesson12/scatterplot_mtb_01/index.png" width=400>
 
 ## A Statistical Model 
 
@@ -111,6 +113,6 @@ If the model can not figure out the underlying relationship between independent 
 We shall go into details of this particular loss function in upcoming lessons. 
 In fact, we can design our own (very) basic loss function to further explain how it works. 
 
-### Summary 
+## Summary 
 
 In this lesson we briefly looked at statistical learning theory and its main components. We looked at what a statistical model is and what the model parameters. We looked at this in context of most simple model, a straight line. Next we shall see the "Learning" part of statistical learning theory by learning learning slope and intercept parameters of a straight line. 
