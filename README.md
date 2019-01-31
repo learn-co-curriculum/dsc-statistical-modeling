@@ -51,12 +51,12 @@ Independent and dependent variables always go on the same places in a graph. Thi
 
 SO a model essentially defines a **Relationship** between a dependent and an independent variable. For the plot we see above, the relationship between height and weight, in its simplest form, can be shown using a **straight line** connecting all the individual observations in the data. So this line here would be our **model** as shown. 
 
-We can define and **fit** such a straight line to our data following a straight line equation: **y = m * x + c** . Such a simple model would simply describes, a person's height  has almost a linear relationship with weight i.e. weight increases with height. 
+We can define and **fit** such a straight line to our data following a straight line equation: **y = m * x + b** . Such a simple model would simply describes, a person's height  has almost a linear relationship with weight i.e. weight increases with height. 
 <img src="https://blogs.sas.com/content/iml/files/2013/02/RegSlopeInt.png" width = 400>. 
 
 So this is our simple model for the relationship. Of course we can use more sophisticated models like quadratic equations or polynomial equations for a **better fit**, and we shall see that with advanced modeling techniques. Let's get back to our plain old straight line for now. 
 
-Looking at this line above, we can define is as **Weight = -143 + 3.9 * Height**, based on slope(m) and intercept(c) values for **y = mx+ c**.  
+Looking at this line above, we can define is as **Weight = -143 + 3.9 * Height**, based on slope(m) and intercept(c) values for **y = mx+ b**.  
 
 This would be our **model**, which can help us work out a weight value for a given height OR in some cases you may put to change the orientation of data and try to predict height based on an individual's weight. That's all got to do with the question you are trying to ask. 
 
@@ -70,15 +70,15 @@ Every model Parameters are the co-efficients of the model equation for estimatin
 For the straight line above, we need to learn the **slope** and **intercept** for a line that best describes the relationship between the data elements. So in the formula below:
 <img src="https://i.ytimg.com/vi/uBU29wVNFdk/hqdefault.jpg" width = 300>
 
-Once we have learned the m and c values, we can predict a value of y( weight in our example) for a given value of x (the height above). In our next lab, we shall see how to calculate these for a given dataset. 
+Once we have learned the m and b values, we can predict a value of y (weight in our example) for a given value of x (the height above). In our next lab, we shall see how to calculate these for a given dataset. 
 
 ### An example
 
 What determines an individual's income? If we suppose that income is a a function of one’s years of  education and years of experience. A model that estimates the income could look like:
 
-#### income = c + β0 x education + β1 x experience
+#### $income =  m_0 . education + m_1 . experience + b$
 
-β0 and β1 are model parameters that express income as a function of education and experience.
+$m_0$ and $m_1$ are model parameters that express income as a function of education and experience. The single paramater  __m__ from linear regression above is replaced by two new parameters in case of two predictor variables. 
 
 Education and experience are Independent variables. These controllable variables are also called as **features** of the model.
 
