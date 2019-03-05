@@ -3,116 +3,157 @@
 
 ## Introduction
 
-This lesson will introduce you to the basics of statistical learning theory and some key components in the framework of this theory. The is particularly important and all the machine learning approaches that we will come across later are built upon the ideas of statistical machine learning. 
+In this lesson, you'll be introduced to Statistical Learning Theory and some key components in the framework of this theory. This is a particularly important theory as it encompasses majority of statistical inference and functional analyses approaches. Statistical Learning Theory has applications in a wide variety of fields such as image and speech recognition, bio-informatics, sports, etc.
 
 ## Objectives
 
 You will be able to: 
 
-* Understand and describe the statistical learning theory 
-* Understand dependent and independent variables as key components of statistical learning approaches
+* Describe the Statistical Learning Theory 
+* Explain what dependent and independent variables are key components of statistical learning approaches
 * Give an introduction on model development and model parameters
 * Demonstrate a basic understanding of ideas of model loss and model validation
 
-## Statistical Learning
+## Statistical Learning Theory
 
-> Statistical learning theory is a framework for machine learning drawing from the fields of statistics and functional analysis. Statistical learning theory deals with the problem of finding a predictive function based on data. **The goal of statistical learning theory is to study, in a statistical framework, the properties of learning algorithms.**
+> Statistical Learning Theory is a framework that is based on the idea of using data along with statistics to provide a framework for learning.
 
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_t-gBMZuaSC9dL6F3Y3pYRs9lS1TnKeMs9hVRvHhyWdXl_23-)
+In Statistical Learning Theory, the main idea is to **construct a model** to draw certain conclusions from data, and next, to **use this model** to make predictions.
 
-Statistical learning theory has led to successful applications in fields such as computer vision, speech recognition, bioinformatics and sports. We shall look at some of these domains in the machine learning module. 
 
-So how do we get started on this? what does it involve? Statistical learning refers to tools and techniques that enable us to investigate and understand data in a better way. Let's see what this involves:
+## Types of Data in Statistical Learning 
 
-## Types of data in statistical learning 
+In the context of Statistical learning, there are two main types of data:
 
-In the context of Statistical learning, there are two types of data:
+* **Dependent variables**: data that can be controlled directly (other names: outcome variables, target variables, response variables) 
+* **Independent variables**: data that cannot be controlled directly (other names: predictor variables, input variables, explanatory variables, features)
 
-* **Data that can be controlled directly OR independent variables** 
-* **Data that cannot be controlled directly OR dependent variables**
 
-![](https://d2gne97vdumgn3.cloudfront.net/api/file/eGMujSksSVm9tpp5Fgpd)
+In models, the independent variable(s) are the variables that will affect (or will lead to a change in) the dependent variable(s).
 
-Note: There is a third type of variable called a **controlled** variable used for control/clinical testing. We shall visit that later. 
 
-Two examples of common independent variables are age and time. There’s nothing you or anything else can do to speed up or slow down time or increase or decrease age. They’re independent of everything else.
 
-An example of a dependent variable is how much you weigh at different ages. The dependent variable (height) depends on the independent variable (age).
+Two examples of common **independent variables** are age and time. There is nothing you can do to speed up or slow down time or increase or decrease age. They are independent of everything else.
 
-The dependent variable is 'dependent' on the independent variable. As the experimenter changes the independent variable, the effect on the dependent variable is observed and recorded. 
+An example of a **dependent variable** is how much you weigh at different ages. Here, the dependent variable (weight) depends on the independent variable (age). As someone's weight fluctuates over time, you can observe and record your weight as a dependent variable on your age. 
 
-Independent and dependent variables always go on the same places in a graph. This makes it easy for you to quickly see which variable is independent and which is dependent when looking at a graph or chart. The independent variable always goes on the x-axis, or the horizontal axis. For the height weight data that we have been seeing , a scatter plot may look as shown below. Here we have set height as independant and weight as a dependent variable i.d. we want to study if height has some effect on weight:
+Independent and dependent variables are normally shown on a graph under a standardized approach. This makes it easy for you to quickly see which variable is independent and which is dependent when looking at a graph or chart. 
 
-<img  src ="https://onlinecourses.science.psu.edu/stat500/sites/onlinecourses.science.psu.edu.stat500/files/lesson12/scatterplot_mtb_01/index.png" width=400>
+Conventionally, the independent variable goes on the x-axis, or the horizontal axis. Let's consider another example, one where we look at someone's income depending on their age. Below, you see a scatter plot where age is the independent variable, and income is the dependent variable. In this setting, **we want to study if age has some effect on annual income**.
 
-## A Statistical Model 
+<img  src ="images/scatter_age_income.png" width=500>
 
-> A statistical model can be thought as some kind of a transformation that helps us express dependent variables **as a function** of independent variables. 
+## Statistical Model 
 
-SO a model essentially defines a **Relationship** between a dependent and an independent variable. For the plot we see above, the relationship between height and weight, in its simplest form, can be shown using a **straight line** connecting all the individual observations in the data. So this line here would be our **model** as shown. 
+> **A statistical model can be thought of as some kind of a transformation that helps us express dependent variables as a function of one or more independent variables**. 
 
-We can define and **fit** such a straight line to our data following a straight line equation: **y = m * x + b** . Such a simple model would simply describes, a person's height  has almost a linear relationship with weight i.e. weight increases with height. 
-<img src="https://blogs.sas.com/content/iml/files/2013/02/RegSlopeInt.png" width = 400>. 
+ A statistical model defines a **relationship** between a dependent and an independent variable. 
 
-So this is our simple model for the relationship. Of course we can use more sophisticated models like quadratic equations or polynomial equations for a **better fit**, and we shall see that with advanced modeling techniques. Let's get back to our plain old straight line for now. 
+For the plot we see above, the relationship between age and income can be shown using a **straight line** connecting all the individual observations in the data. So this line here would be our **model** as shown in the image below. 
 
-Looking at this line above, we can define is as **Weight = -143 + 3.9 * Height**, based on slope(m) and intercept(c) values for **y = mx+ b**.  
+<img src="images/scatter_line_age_income.png" width = 600>. 
 
-This would be our **model**, which can help us work out a weight value for a given height OR in some cases you may put to change the orientation of data and try to predict height based on an individual's weight. That's all got to do with the question you are trying to ask. 
+
+We can define and **fit** such a straight line to our data following a straight line equation: 
+
+$$y = m  x + c$$ 
+
+You'll often come across greek letters talking about models like this. Another common way of writing a linear equation is ($\beta$ is the greek letter "beta"):
+
+$$y = \beta_0 + \beta_1  x $$ 
+
+$\beta_0$ has the same role as $c$ in the first expression and denotes the _intercept with the y-axis_.
+$\beta_1$ has the same role as $m$ in the first expression and denotes the _slope of the line_. More on this below.
+
+
+Such a simple model would describe a person's height has **almost** a linear relationship with weight i.e. weight increases with height. 
+
+
+So this is our simple model for the relationship. Of course we can use more sophisticated models like quadratic equations or polynomial equations for a **better fit**, and you may see this later on if you dig into more advanced modeling. 
+
+Looking at this line above, we can define is as **Income = 1500 + 1000 * Age**, based on slope ($m$ or $\beta_1$) and intercept (c or $\beta_0$) values.  
+
+This would be our **linear model** (Linear refers to a model consisting a straight line, or "linear regression"), which can help us work out a weight value for a given height. In summary,
 
 > A model is expressed as a mathematical equation showing the relationship between dependent and independent variables. 
 
 
-## Model Parameters
+## Statistical Model Parameters
 
-Every model Parameters are the co-efficients of the model equation for estimating the output. Statistical Learning is all about learning these parameters. A statistical learning approach would help us **learn** these parameters so we have a clear description of their relationship which we can replicate and analyze under different circumstances. 
+> **Model Parameters are the coefficients of the model equation for estimating the output**. 
 
-For the straight line above, we need to learn the **slope** and **intercept** for a line that best describes the relationship between the data elements. So in the formula below:
-<img src="https://i.ytimg.com/vi/uBU29wVNFdk/hqdefault.jpg" width = 300>
+Statistical Learning is all about learning these parameters. A statistical learning approach would help us **learn** these parameters so we have a clear description of their relationship which we can replicate and analyze under different circumstances. 
 
-Once we have learned the m and b values, we can predict a value of y (weight in our example) for a given value of x (the height above). In our next lab, we shall see how to calculate these for a given dataset. 
+For the straight line above, we need to learn the **slope** and **intercept** for the line that best describes the relationship between the data elements in the dataset. We gave you the two values here, but in general you'll have to **learn these values**. These values are denoted by **parameters**.
 
-### An example
+Once we have learned the $m$ (or $\beta_1$) and $c$ (or $\beta_0$) values, we can predict a value of $y$ (imcome in our example) for a given value of $x$ (age). In our next lab, you'll learn how to calculate these for a given dataset.  Let's have a look at another example:
 
-What determines an individual's income? If we suppose that income is a a function of one’s years of  education and years of experience. A model that estimates the income could look like:
+### What Else Determines an Individual's Income? 
 
-#### $income =  m_0 . education + m_1 . experience + b$
+If we suppose that income is a a function of not only age, but also education level. A model that estimates the income could look like:
 
-$m_0$ and $m_1$ are model parameters that express income as a function of education and experience. The single paramater  __m__ from linear regression above is replaced by two new parameters in case of two predictor variables. 
+$$income = \beta_0 + \beta_1 *  \text{age} + \beta_2 * \text{education level}$$
 
-Education and experience are Independent variables. These controllable variables are also called as **features** of the model.
+Here we have two independent variables i.e. age and education level, with the same dependent variable, income. $\beta_0$, $\beta_1$ and $\beta_2$ are model parameters.
 
-Income is uncontrollable variable. It is a dependent variable, also known as a **target**.
 
-## Model Validation
+## Model Generalization
 
-> Data is finite. 
+As the data which is available to us for modeling is finite, the available data needs to be used very efficiently to build and **validate** a model. Validation of the model usually makes the model more **generalizable** for unseen situations. 
 
-The available data needs to be used very efficiently to build and **validate** a model. 
+Training the model is like infancy stage for humans. Examples are presented to the model and the model tweaks its  parameters to better understand the data. Once the training is over, the model is unleashed upon new data and then uses what it has learned to explain that data.  This is where problems can emerge. If we **over-train** the model on the training data i.e. make the model every detail of shown data, it will be able to identify all the relevant information in the training data, but will fail miserably when presented with the new data. 
 
-Here is a brief introduction to validation, in its simplest form:
+We then say that the **model is not capable of generalizing**, or that **model is over-fitting the training data**. 
 
-* Split the data into two parts.
-* Use one part for training so the model learns from it. This set of data is normally called the **Training Data**
 
-* Use the other part for testing the model. This is data is kept away from the model during learning process and used only for testing the performance of a learned model. This dataset is called as the **Testing Data.**
+Here's a great example of the phenomenon: modeling happiness as a function of wealth. 
+
+
+![](images/happy.png)
+
+The top three diagrams we have data and models (dashed curves). From left to right the models have been trained longer and longer on the training data. The training error curve in the bottom box shows that the training error gets better and better as we train longer (increasing model complexity). You may think that if we train longer we'll get better! Well, yes, but **only better at describing the training data**. The top right box shows a very complex model that hits all the data points. This model does great on the training data, but when presented with new data (examine the Prediction error curve in the bottom box) then it does worse! 
+
+In order to create good predictive models in machine learning that are capable of generalizing, one needs to know when to stop training the model so that it doesn't over-fit.
+
+
+
+### Model Validation
+
+>**Model validation is a process of controlling over-fitting and allow a higher degree of generalizability.**
+
+Here is how we perform validation, in its simplest form:
+
+* Split the data into two parts with a 70/30 , 80/20 or s similar split
+
+* Use the larger part for training so the model learns from it. This set of data is normally called the **training Data**
+
+* Use the smaller part for testing the model. This is data is kept away from the model during learning process and used only for testing the performance of a learned model. This dataset is called as the **testing Data**
 
 This setup looks like as shown below:
-![](https://francisbrochu.github.io/microbiome-summer-school-2017_mass-spec/sections/machine_learning/figures/train_test_sets.png)
+![](images/train_test_sets.png)
 
-In statistical learning, if the model has learned well from the training data, it will perform well on the test data and that would be our measure of accuracy. It is assessed based on how close it has estimated the output to the actual value.
+In statistical learning, if the model has learned well from the training data, it will perform well on both training data **and** test data. You can then use the test data to calculate the **accuracy**, which is assessed based on how close it has estimated the output to the actual value.
 
 
-## Loss Functions
+## Model Loss 
 
->A loss function method of evaluating how well your model represents the relationship between data variables. 
+> **A loss function evaluates how well your model represents the relationship between data variables**. 
 
-If the model can not figure out the underlying relationship between independent and dependent variable(s), the loss function outputs a higher number. If the relationship is well modeled, the loss function will be a lower value. As you change parameters of your model to try and improve results, your loss function is your best friend, telling you if you are on the right track. Below is an example loss function which calculates a loss for fitting straight line to set of variables (as in our case above). The function tries to measure the distance between data points and line to measure the level of LOSS. 
-![](https://blog.algorithmia.com/wp-content/uploads/2018/04/word-image-5.png)
+If the model is unable to identify the underlying relationship between independent and dependent variable(s), the loss function will output a very high number. Consider the age vs. income example above. You can see that the linear model is not exactly touching each data point because these points do not exist in a line. the individual distance of each point from the line is the **loss** that the model exhibits. 
+![](images/loss.png)
 
-We shall go into details of this particular loss function in upcoming lessons. 
-In fact, we can design our own (very) basic loss function to further explain how it works. 
+These individual losses, which is essentially the **vertical distance between the individual data points and the line** are taken into account to calculate the overall model loss. 
+
+If the relationship is well modeled, the loss will be a low. As we change parameters of our model to try and improve results, our loss function is our best friend, telling us if we are on the right track. 
+
+You'll learn about loss in further detail in upcoming lessons.
+
+## Additional Resources
+
+- [Youtube: Introduction to Statistical Learning Theory](https://www.youtube.com/watch?v=rqJ8SrnmWu0)
+
+- [An Overview of Statistical Learning Theory with examples](https://www.princeton.edu/~harman/Papers/SLT-tutorial.pdf) 
 
 ## Summary 
 
-In this lesson we briefly looked at statistical learning theory and its main components. We looked at what a statistical model is and what the model parameters. We looked at this in context of most simple model, a straight line. Next we shall see the "Learning" part of statistical learning theory by learning learning slope and intercept parameters of a straight line. 
+In this lesson we briefly looked at statistical learning theory and its main components. We looked at what a statistical model is and what the model parameters. We looked at this in context of most simple model, a straight line. Next we shall see the "learning" part of statistical learning theory by learning learning slope and intercept parameters of a straight line. 
