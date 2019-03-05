@@ -11,7 +11,7 @@ You will be able to:
 
 * Describe the Statistical Learning Theory 
 * Explain what dependent and independent variables are key components of statistical learning approaches
-* Give an introduction on model development and model parameters
+* Explain how parameters are essential parts of model estimation
 * Demonstrate a basic understanding of ideas of model loss and model validation
 
 ## Statistical Learning Theory
