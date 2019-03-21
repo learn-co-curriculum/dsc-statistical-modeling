@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lesson, you'll be introduced to Statistical Learning Theory and some key components in the framework of this theory. This is a particularly important theory as it encompasses majority of statistical inference and functional analyses approaches. Statistical Learning Theory has applications in a wide variety of fields such as image and speech recognition, bio-informatics, sports, etc.
+In this lesson, you'll be introduced to Statistical Learning Theory and some key components in the framework of this theory. This is a particularly important theory as it encompasses the majority of statistical inference and functional analyses approaches. Statistical Learning Theory has applications in a wide variety of fields such as image and speech recognition, bio-informatics, sports, etc.
 
 ## Objectives
 
@@ -58,7 +58,7 @@ We can define and **fit** such a straight line to our data following a straight 
 
 $$y = m  x + c$$ 
 
-You'll often come across greek letters talking about models like this. Another common way of writing a linear equation is ($\beta$ is the greek letter "beta"):
+You'll often come across greek letters talking about models like this. Another common way of writing a linear equation is ($\beta$ is the Greek letter "beta"):
 
 $$y = \beta_0 + \beta_1  x $$ 
 
@@ -69,11 +69,11 @@ $\beta_1$ has the same role as $m$ in the first expression and denotes the _slop
 Such a simple model would describe a person's height has **almost** a linear relationship with weight i.e. weight increases with height. 
 
 
-So this is our simple model for the relationship. Of course we can use more sophisticated models like quadratic equations or polynomial equations for a **better fit**, and you may see this later on if you dig into more advanced modeling. 
+So this is our simple model for the relationship. Of course, we can use more sophisticated models like quadratic equations or polynomial equations for a **better fit**, and you may see this later on if you dig into more advanced modeling. 
 
-Looking at this line above, we can define is as **Income = 1500 + 1000 * Age**, based on slope ($m$ or $\beta_1$) and intercept (c or $\beta_0$) values.  
+Looking at this line above, we can define it as **Income = 1500 + 1000 * Age**, based on slope ($m$ or $\beta_1$) and intercept (c or $\beta_0$) values.  
 
-This would be our **linear model** (Linear refers to a model consisting a straight line, or "linear regression"), which can help us work out a weight value for a given height. In summary,
+This would be our **linear model** (Linear refers to a model consisting of a straight line, or "linear regression"), which can help us work out a weight value for a given height. In summary,
 
 > A model is expressed as a mathematical equation showing the relationship between dependent and independent variables. 
 
@@ -84,9 +84,9 @@ This would be our **linear model** (Linear refers to a model consisting a straig
 
 Statistical Learning is all about learning these parameters. A statistical learning approach would help us **learn** these parameters so we have a clear description of their relationship which we can replicate and analyze under different circumstances. 
 
-For the straight line above, we need to learn the **slope** and **intercept** for the line that best describes the relationship between the data elements in the dataset. We gave you the two values here, but in general you'll have to **learn these values**. These values are denoted by **parameters**.
+For the straight line above, we need to learn the **slope** and **intercept** for the line that best describes the relationship between the data elements in the dataset. We gave you the two values here, but in general, you'll have to **learn these values**. These values are denoted by **parameters**.
 
-Once we have learned the $m$ (or $\beta_1$) and $c$ (or $\beta_0$) values, we can predict a value of $y$ (imcome in our example) for a given value of $x$ (age). In our next lab, you'll learn how to calculate these for a given dataset.  Let's have a look at another example:
+Once we have learned the $m$ (or $\beta_1$) and $c$ (or $\beta_0$) values, we can predict a value of $y$ (income in our example) for a given value of $x$ (age). In our next lab, you'll learn how to calculate these for a given dataset.  Let's have a look at another example:
 
 ### What Else Determines an Individual's Income? 
 
@@ -99,9 +99,9 @@ Here we have two independent variables i.e. age and education level, with the sa
 
 ## Model Generalization
 
-As the data which is available to us for modeling is finite, the available data needs to be used very efficiently to build and **validate** a model. Validation of the model usually makes the model more **generalizable** for unseen situations. 
+As the data which is available to us for modeling is finite, the available data needs to be used very effectively to build and **validate** a model. Validation of the model usually makes the model more **generalizable** for unseen situations. 
 
-Training the model is like infancy stage for humans. Examples are presented to the model and the model tweaks its  parameters to better understand the data. Once the training is over, the model is unleashed upon new data and then uses what it has learned to explain that data.  This is where problems can emerge. If we **over-train** the model on the training data i.e. make the model every detail of shown data, it will be able to identify all the relevant information in the training data, but will fail miserably when presented with the new data. 
+Training the model is like the infancy stage for humans. Examples are presented to the model and the model tweaks its parameters to better understand the data. Once the training is over, the model is unleashed upon new data and then uses what it has learned to explain that data.  This is where problems can emerge. If we **over-train** the model on the training data i.e. make the model every detail of shown data, it will be able to identify all the relevant information in the training data, but will fail miserably when presented with the new data. 
 
 We then say that the **model is not capable of generalizing**, or that **model is over-fitting the training data**. 
 
@@ -127,7 +127,7 @@ Here is how we perform validation, in its simplest form:
 
 * Use the larger part for training so the model learns from it. This set of data is normally called the **training Data**
 
-* Use the smaller part for testing the model. This is data is kept away from the model during learning process and used only for testing the performance of a learned model. This dataset is called as the **testing Data**
+* Use the smaller part for testing the model. This is data is not being used during the model learning process and used only for testing the performance of a learned model. This dataset is called as the **testing Data**
 
 This setup looks like as shown below:
 ![](images/train_test_sets.png)
@@ -139,12 +139,12 @@ In statistical learning, if the model has learned well from the training data, i
 
 > **A loss function evaluates how well your model represents the relationship between data variables**. 
 
-If the model is unable to identify the underlying relationship between independent and dependent variable(s), the loss function will output a very high number. Consider the age vs. income example above. You can see that the linear model is not exactly touching each data point because these points do not exist in a line. the individual distance of each point from the line is the **loss** that the model exhibits. 
+If the model is unable to identify the underlying relationship between the independent and dependent variable(s), the loss function will output a very high number. Consider the age vs. income example above. You can see that the linear model is not exactly touching each data point because these points do not exist in a line. the individual distance of each point from the line is the **loss** that the model exhibits. 
 ![](images/loss.png)
 
 These individual losses, which is essentially the **vertical distance between the individual data points and the line** are taken into account to calculate the overall model loss. 
 
-If the relationship is well modeled, the loss will be a low. As we change parameters of our model to try and improve results, our loss function is our best friend, telling us if we are on the right track. 
+If the relationship is well modeled, the loss will be low. As we change parameters of our model to try and improve results, our loss function is our best friend, telling us if we are on the right track. 
 
 You'll learn about loss in further detail in upcoming lessons.
 
@@ -156,4 +156,4 @@ You'll learn about loss in further detail in upcoming lessons.
 
 ## Summary 
 
-In this lesson we briefly looked at statistical learning theory and its main components. We looked at what a statistical model is and what the model parameters. We looked at this in context of most simple model, a straight line. Next we shall see the "learning" part of statistical learning theory by learning learning slope and intercept parameters of a straight line. 
+In this lesson we briefly looked at statistical learning theory and its main components. We looked at what a statistical model is and what the model parameters. We looked at this in the context of the most simple model, a straight line. Next we shall see the "learning" part of statistical learning theory by learning slope and intercept parameters of a straight line. 
