@@ -41,7 +41,7 @@ Independent and dependent variables are normally shown on a graph under a standa
 
 Conventionally, the independent variable goes on the x-axis, or the horizontal axis. Let's consider another example, one where we look at someone's income depending on their age. Below, you see a scatter plot where age is the independent variable, and income is the dependent variable. In this setting, **we want to study if age has some effect on annual income**.
 
-<img  src ="images/scatter_age_income.png" width=500>
+<img  src ="images/scatter_age_income.png" width="500">
 
 ## Statistical Model 
 
@@ -51,7 +51,7 @@ Conventionally, the independent variable goes on the x-axis, or the horizontal a
 
 For the plot we see above, the relationship between age and income can be shown using a **straight line** connecting all the individual observations in the data. So this line here would be our **model** as shown in the image below. 
 
-<img src="images/scatter_line_age_income.png" width = 600>. 
+<img src="images/scatter_line_age_income.png" width="600">. 
 
 
 We can define and **fit** such a straight line to our data following a straight line equation: 
@@ -109,7 +109,7 @@ We then say that the **model is not capable of generalizing**, or that **model i
 Here's a great example of the phenomenon: modeling happiness as a function of wealth. 
 
 
-![](images/happy.png)
+<img src="./images/new_happy.png" width="600">
 
 The top three diagrams we have data and models (dashed curves). From left to right the models have been trained longer and longer on the training data. The training error curve in the bottom box shows that the training error gets better and better as we train longer (increasing model complexity). You may think that if we train longer we'll get better! Well, yes, but **only better at describing the training data**. The top right box shows a very complex model that hits all the data points. This model does great on the training data, but when presented with new data (examine the Prediction error curve in the bottom box) then it does worse! 
 
@@ -130,7 +130,7 @@ Here is how we perform validation, in its simplest form:
 * Use the smaller part for testing the model. This is data is not being used during the model learning process and used only for testing the performance of a learned model. This dataset is called as the **testing Data**
 
 This setup looks like as shown below:
-![](images/train_test_sets.png)
+<img src="./images/new_train_test_sets.png" width="600">
 
 In statistical learning, if the model has learned well from the training data, it will perform well on both training data **and** test data. You can then use the test data to calculate the **accuracy**, which is assessed based on how close it has estimated the output to the actual value.
 
@@ -140,7 +140,8 @@ In statistical learning, if the model has learned well from the training data, i
 > **A loss function evaluates how well your model represents the relationship between data variables**. 
 
 If the model is unable to identify the underlying relationship between the independent and dependent variable(s), the loss function will output a very high number. Consider the age vs. income example above. You can see that the linear model is not exactly touching each data point because these points do not exist in a line. the individual distance of each point from the line is the **loss** that the model exhibits. 
-![](images/loss.png)
+
+<img src="./images/new_loss.png" width="400">
 
 These individual losses, which is essentially the **vertical distance between the individual data points and the line** are taken into account to calculate the overall model loss. 
 
@@ -157,3 +158,8 @@ You'll learn about loss in further detail in upcoming lessons.
 ## Summary 
 
 In this lesson we briefly looked at statistical learning theory and its main components. We looked at what a statistical model is and what the model parameters. We looked at this in the context of the most simple model, a straight line. Next we shall see the "learning" part of statistical learning theory by learning slope and intercept parameters of a straight line. 
+
+
+```python
+
+```
