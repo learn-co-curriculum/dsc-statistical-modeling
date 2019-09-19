@@ -111,7 +111,7 @@ Here's a great example of the phenomenon: modeling happiness as a function of we
 
 <img src="./images/new_happy.png" width="600">
 
-The top three diagrams we have data and models (dashed curves). From left to right the models have been trained longer and longer on the training data. The training error curve in the bottom box shows that the training error gets better and better as we train longer (increasing model complexity). You may think that if we train longer we'll get better! Well, yes, but **only better at describing the training data**. The top right box shows a very complex model that hits all the data points. This model does great on the training data, but when presented with new data (examine the Prediction error curve in the bottom box) then it does worse! 
+In the top three diagrams, we have data and models (dashed curves). From left to right the models have been trained longer and longer on the training data. The training error curve in the bottom box shows that the training error gets better and better as we train longer (increasing model complexity). You may think that if we train longer we'll get better! Well, yes, but **only better at describing the training data**. The top right box shows a very complex model that hits all the data points. This model does great on the training data, but when presented with new data (examine the Prediction error curve in the bottom box) then it does worse! 
 
 In order to create good predictive models in machine learning that are capable of generalizing, one needs to know when to stop training the model so that it doesn't over-fit.
 
@@ -119,11 +119,11 @@ In order to create good predictive models in machine learning that are capable o
 
 ### Model Validation
 
->**Model validation is a process of controlling over-fitting and allow a higher degree of generalizability.**
+>**Model validation is a process of controlling overfitting and allows a higher degree of generalizability.**
 
 Here is how we perform validation, in its simplest form:
 
-* Split the data into two parts with a 70/30 , 80/20 or s similar split
+* Split the data into two parts with a 70/30, 80/20 or s similar split
 
 * Use the larger part for training so the model learns from it. This set of data is normally called the **training Data**
 
@@ -145,7 +145,7 @@ If the model is unable to identify the underlying relationship between the indep
 
 These individual losses, which is essentially the **vertical distance between the individual data points and the line** are taken into account to calculate the overall model loss. 
 
-If the relationship is well modeled, the loss will be low. As we change parameters of our model to try and improve results, our loss function is our best friend, telling us if we are on the right track. 
+If the relationship is well modeled, the loss will be low. As we change the parameters of our model to try and improve results, our loss function is our best friend, telling us if we are on the right track. 
 
 You'll learn about loss in further detail in upcoming lessons.
 
@@ -157,9 +157,6 @@ You'll learn about loss in further detail in upcoming lessons.
 
 ## Summary 
 
-In this lesson we briefly looked at statistical learning theory and its main components. We looked at what a statistical model is and what the model parameters. We looked at this in the context of the most simple model, a straight line. Next we shall see the "learning" part of statistical learning theory by learning slope and intercept parameters of a straight line. 
+In this lesson, we briefly looked at statistical learning theory and its main components. We looked at what a statistical model is and what the model parameters. We looked at this in the context of the most simple model, a straight line. Next, we‘ll see the "learning" part of statistical learning theory by learning slope and intercept parameters of a straight line. 
 
 
-```python
-
-```
