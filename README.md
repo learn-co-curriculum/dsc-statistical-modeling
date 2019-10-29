@@ -3,20 +3,18 @@
 
 ## Introduction
 
-In this lesson, you'll be introduced to Statistical Learning Theory and some key components in the framework of this theory. This is a particularly important theory as it encompasses the majority of statistical inference and functional analyses approaches. Statistical Learning Theory has applications in a wide variety of fields such as image and speech recognition, bio-informatics, sports, etc.
+In this lesson, you'll be introduced to Statistical Learning Theory and some key components in the framework of this theory. This is a particularly important theory as it encompasses the majority of statistical inference and functional analyses approaches. Statistical Learning Theory has applications in a wide variety of fields such as image and speech recognition, bioinformatics, sports, etc.
 
 ## Objectives
 
 You will be able to: 
 
-* Describe the Statistical Learning Theory 
-* Explain what dependent and independent variables are key components of statistical learning approaches
-* Explain how parameters are essential parts of model estimation
-* Demonstrate a basic understanding of ideas of model loss and model validation
+* Identify independent and dependent variables in a statistical model
+* Describe loss and its importance in relation to model creation
 
 ## Statistical Learning Theory
 
-> Statistical Learning Theory is a framework that is based on the idea of using data along with statistics to provide a framework for learning.
+> Statistical Learning Theory is based on the idea of using data along with statistics to provide a framework for learning.
 
 In Statistical Learning Theory, the main idea is to **construct a model** to draw certain conclusions from data, and next, to **use this model** to make predictions.
 
@@ -90,7 +88,7 @@ Once we have learned the $m$ (or $\beta_1$) and $c$ (or $\beta_0$) values, we ca
 
 ### What Else Determines an Individual's Income? 
 
-If we suppose that income is a a function of not only age, but also education level. A model that estimates the income could look like:
+If we suppose that income is a function of not only age, but also education level. A model that estimates the income could look like:
 
 $$income = \beta_0 + \beta_1 *  \text{age} + \beta_2 * \text{education level}$$
 
@@ -123,11 +121,11 @@ In order to create good predictive models in machine learning that are capable o
 
 Here is how we perform validation, in its simplest form:
 
-* Split the data into two parts with a 70/30, 80/20 or s similar split
+* Split the data into two parts with a 70/30, 80/20 or a similar split
 
-* Use the larger part for training so the model learns from it. This set of data is normally called the **training Data**
+* Use the larger part for training so the model learns from it. This set of data is normally called the **Training Data**
 
-* Use the smaller part for testing the model. This is data is not being used during the model learning process and used only for testing the performance of a learned model. This dataset is called as the **testing Data**
+* Use the smaller part for testing the model. This is data is not being used during the model learning process and used only for testing the performance of a learned model. This dataset is called as the **Testing Data**
 
 This setup looks like as shown below:
 <img src="./images/new_train_test_sets.png" width="600">
@@ -157,6 +155,4 @@ You'll learn about loss in further detail in upcoming lessons.
 
 ## Summary 
 
-In this lesson, we briefly looked at statistical learning theory and its main components. We looked at what a statistical model is and what the model parameters. We looked at this in the context of the most simple model, a straight line. Next, we‘ll see the "learning" part of statistical learning theory by learning slope and intercept parameters of a straight line. 
-
-
+In this lesson, you briefly looked at statistical learning theory and its main components. You looked at what a statistical model is and what the model parameters represent. You also got a feel for the differences between independent and dependent variables plus learned about loss and its role in model creation. You looked at all of this in the context of a simple model, a straight line. Next, you‘ll see the "learning" part of statistical learning theory by learning slope and intercept parameters of a straight line.  
