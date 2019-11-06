@@ -49,7 +49,7 @@ Conventionally, the independent variable goes on the x-axis, or the horizontal a
 
 For the plot we see above, the relationship between age and income can be shown using a **straight line** connecting all the individual observations in the data. So this line here would be our **model** as shown in the image below. 
 
-<img src="images/scatter_line_age_income.png" width="600">. 
+<img src="images/scatter_line_age_income.png" width="600"> 
 
 
 We can define and **fit** such a straight line to our data following a straight line equation: 
