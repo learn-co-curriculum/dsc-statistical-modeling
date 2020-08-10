@@ -9,15 +9,14 @@ In this lesson, you'll be introduced to Statistical Learning Theory and some key
 
 You will be able to: 
 
-* Identify independent and dependent variables in a statistical model
-* Describe loss and its importance in relation to model creation
+- Identify independent and dependent variables in a statistical model
+- Describe loss and its importance in relation to model creation
 
 ## Statistical Learning Theory
 
 > Statistical Learning Theory is based on the idea of using data along with statistics to provide a framework for learning.
 
 In Statistical Learning Theory, the main idea is to **construct a model** to draw certain conclusions from data, and next, to **use this model** to make predictions.
-
 
 ## Types of Data in Statistical Learning 
 
@@ -26,10 +25,7 @@ In the context of Statistical learning, there are two main types of data:
 * **Dependent variables**: data that can be controlled directly (other names: outcome variables, target variables, response variables) 
 * **Independent variables**: data that cannot be controlled directly (other names: predictor variables, input variables, explanatory variables, features)
 
-
 In models, the independent variable(s) are the variables that will affect (or will lead to a change in) the dependent variable(s).
-
-
 
 Two examples of common **independent variables** are age and time. There is nothing you can do to speed up or slow down time or increase or decrease age. They are independent of everything else.
 
@@ -39,7 +35,7 @@ Independent and dependent variables are normally shown on a graph under a standa
 
 Conventionally, the independent variable goes on the x-axis, or the horizontal axis. Let's consider another example, one where we look at someone's income depending on their age. Below, you see a scatter plot where age is the independent variable, and income is the dependent variable. In this setting, **we want to study if age has some effect on annual income**.
 
-<img  src ="images/scatter_age_income.png" width="500">
+<img src ="images/scatter_age_income.png" width="500">
 
 ## Statistical Model 
 
@@ -51,30 +47,26 @@ For the plot we see above, the relationship between age and income can be shown 
 
 <img src="images/scatter_line_age_income.png" width="600"> 
 
-
 We can define and **fit** such a straight line to our data following a straight line equation: 
 
-$$y = m  x + c$$ 
+ <img src="https://render.githubusercontent.com/render/math?math=y = m  x %2b c"> 
 
-You'll often come across greek letters talking about models like this. Another common way of writing a linear equation is ($\beta$ is the Greek letter "beta"):
+You'll often come across greek letters talking about models like this. Another common way of writing a linear equation is ( <img src="https://render.githubusercontent.com/render/math?math=\beta"> is the Greek letter "beta"):
 
-$$y = \beta_0 + \beta_1  x $$ 
+ <img src="https://render.githubusercontent.com/render/math?math=y = \beta_0 %2b \beta_1  x "> 
 
-$\beta_0$ has the same role as $c$ in the first expression and denotes the _intercept with the y-axis_.
-$\beta_1$ has the same role as $m$ in the first expression and denotes the _slope of the line_. More on this below.
-
+ <img src="https://render.githubusercontent.com/render/math?math=\beta_0"> has the same role as  <img src="https://render.githubusercontent.com/render/math?math=c"> in the first expression and denotes the _intercept with the y-axis_.
+ <img src="https://render.githubusercontent.com/render/math?math=\beta_1"> has the same role as  <img src="https://render.githubusercontent.com/render/math?math=m"> in the first expression and denotes the _slope of the line_. More on this below.
 
 Such a simple model would describe a person's height has **almost** a linear relationship with weight i.e. weight increases with height. 
 
-
 So this is our simple model for the relationship. Of course, we can use more sophisticated models like quadratic equations or polynomial equations for a **better fit**, and you may see this later on if you dig into more advanced modeling. 
 
-Looking at this line above, we can define it as **Income = 1500 + 1000 * Age**, based on slope ($m$ or $\beta_1$) and intercept (c or $\beta_0$) values.  
+Looking at this line above, we can define it as **Income = 1500 + 1000 * Age**, based on slope ( <img src="https://render.githubusercontent.com/render/math?math=m"> or  <img src="https://render.githubusercontent.com/render/math?math=\beta_1"> ) and intercept (c or  <img src="https://render.githubusercontent.com/render/math?math=\beta_0"> ) values.  
 
 This would be our **linear model** (Linear refers to a model consisting of a straight line, or "linear regression"), which can help us work out a weight value for a given height. In summary,
 
 > A model is expressed as a mathematical equation showing the relationship between dependent and independent variables. 
-
 
 ## Statistical Model Parameters
 
@@ -84,16 +76,15 @@ Statistical Learning is all about learning these parameters. A statistical learn
 
 For the straight line above, we need to learn the **slope** and **intercept** for the line that best describes the relationship between the data elements in the dataset. We gave you the two values here, but in general, you'll have to **learn these values**. These values are denoted by **parameters**.
 
-Once we have learned the $m$ (or $\beta_1$) and $c$ (or $\beta_0$) values, we can predict a value of $y$ (income in our example) for a given value of $x$ (age). In our next lab, you'll learn how to calculate these for a given dataset.  Let's have a look at another example:
+Once we have learned the  <img src="https://render.githubusercontent.com/render/math?math=m"> (or  <img src="https://render.githubusercontent.com/render/math?math=\beta_1"> ) and  <img src="https://render.githubusercontent.com/render/math?math=c"> (or  <img src="https://render.githubusercontent.com/render/math?math=\beta_0"> ) values, we can predict a value of  <img src="https://render.githubusercontent.com/render/math?math=y"> (income in our example) for a given value of  <img src="https://render.githubusercontent.com/render/math?math=x"> (age). In our next lab, you'll learn how to calculate these for a given dataset.  Let's have a look at another example:
 
 ### What Else Determines an Individual's Income? 
 
 If we suppose that income is a function of not only age, but also education level. A model that estimates the income could look like:
 
-$$income = \beta_0 + \beta_1 *  \text{age} + \beta_2 * \text{education level}$$
+ <img src="https://render.githubusercontent.com/render/math?math=income = \beta_0 %2b \beta_1 *  \text{age} %2b \beta_2 * \text{education level}"> 
 
-Here we have two independent variables i.e. age and education level, with the same dependent variable, income. $\beta_0$, $\beta_1$ and $\beta_2$ are model parameters.
-
+Here we have two independent variables i.e. age and education level, with the same dependent variable, income.  <img src="https://render.githubusercontent.com/render/math?math=\beta_0"> ,  <img src="https://render.githubusercontent.com/render/math?math=\beta_1"> and  <img src="https://render.githubusercontent.com/render/math?math=\beta_2"> are model parameters.
 
 ## Model Generalization
 
@@ -103,17 +94,13 @@ Training the model is like the infancy stage for humans. Examples are presented 
 
 We then say that the **model is not capable of generalizing**, or that **model is over-fitting the training data**. 
 
-
 Here's a great example of the phenomenon: modeling happiness as a function of wealth. 
 
-
-<img src="./images/new_happy.png" width="600">
+<img src="images/new_happy.png" width="600">
 
 In the top three diagrams, we have data and models (dashed curves). From left to right the models have been trained longer and longer on the training data. The training error curve in the bottom box shows that the training error gets better and better as we train longer (increasing model complexity). You may think that if we train longer we'll get better! Well, yes, but **only better at describing the training data**. The top right box shows a very complex model that hits all the data points. This model does great on the training data, but when presented with new data (examine the Prediction error curve in the bottom box) then it does worse! 
 
 In order to create good predictive models in machine learning that are capable of generalizing, one needs to know when to stop training the model so that it doesn't over-fit.
-
-
 
 ### Model Validation
 
@@ -121,14 +108,15 @@ In order to create good predictive models in machine learning that are capable o
 
 Here is how we perform validation, in its simplest form:
 
-* Split the data into two parts with a 70/30, 80/20 or a similar split
+- Split the data into two parts with a 70/30, 80/20 or a similar split
 
-* Use the larger part for training so the model learns from it. This set of data is normally called the **Training Data**
+- Use the larger part for training so the model learns from it. This set of data is normally called the **Training Data**
 
-* Use the smaller part for testing the model. This is data is not being used during the model learning process and used only for testing the performance of a learned model. This dataset is called as the **Testing Data**
+- Use the smaller part for testing the model. This is data is not being used during the model learning process and used only for testing the performance of a learned model. This dataset is called as the **Testing Data**
 
-This setup looks like as shown below:
-<img src="./images/new_train_test_sets.png" width="600">
+This setup looks like as shown below: 
+
+<img src="images/new_train_test_sets.png" width="600">
 
 In statistical learning, if the model has learned well from the training data, it will perform well on both training data **and** test data. You can then use the test data to calculate the **accuracy**, which is assessed based on how close it has estimated the output to the actual value.
 
@@ -139,7 +127,7 @@ In statistical learning, if the model has learned well from the training data, i
 
 If the model is unable to identify the underlying relationship between the independent and dependent variable(s), the loss function will output a very high number. Consider the age vs. income example above. You can see that the linear model is not exactly touching each data point because these points do not exist in a line. the individual distance of each point from the line is the **loss** that the model exhibits. 
 
-<img src="./images/new_loss.png" width="400">
+<img src="images/new_loss.png" width="400">
 
 These individual losses, which is essentially the **vertical distance between the individual data points and the line** are taken into account to calculate the overall model loss. 
 
@@ -149,9 +137,9 @@ You'll learn about loss in further detail in upcoming lessons.
 
 ## Additional Resources
 
-- [Youtube: Introduction to Statistical Learning Theory](https://www.youtube.com/watch?v=rqJ8SrnmWu0)
+- <a href="https://www.youtube.com/watch?v=rqJ8SrnmWu0" target="_blank">Youtube: Introduction to Statistical Learning Theory</a>
 
-- [An Overview of Statistical Learning Theory with examples](https://www.princeton.edu/~harman/Papers/SLT-tutorial.pdf) 
+- <a href="https://www.princeton.edu/~harman/Papers/SLT-tutorial.pdf" target="_blank">An Overview of Statistical Learning Theory with examples</a>
 
 ## Summary 
 
