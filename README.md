@@ -22,8 +22,8 @@ In Statistical Learning Theory, the main idea is to **construct a model** to dra
 
 In the context of Statistical learning, there are two main types of data:
 
-* **Dependent variables**: data that can be controlled directly (other names: outcome variables, target variables, response variables) 
-* **Independent variables**: data that cannot be controlled directly (other names: predictor variables, input variables, explanatory variables, features)
+- **Dependent variables**: data that can be controlled directly (other names: outcome variables, target variables, response variables) 
+- **Independent variables**: data that cannot be controlled directly (other names: predictor variables, input variables, explanatory variables, features)
 
 In models, the independent variable(s) are the variables that will affect (or will lead to a change in) the dependent variable(s).
 
@@ -35,7 +35,7 @@ Independent and dependent variables are normally shown on a graph under a standa
 
 Conventionally, the independent variable goes on the x-axis, or the horizontal axis. Let's consider another example, one where we look at someone's income depending on their age. Below, you see a scatter plot where age is the independent variable, and income is the dependent variable. In this setting, **we want to study if age has some effect on annual income**.
 
-<img src ="images/scatter_age_income.png">
+<img src="images/scatter_age_income.png" width="600"> 
 
 ## Statistical Model 
 
@@ -49,7 +49,7 @@ For the plot we see above, the relationship between age and income can be shown 
 
 We can define and **fit** such a straight line to our data following a straight line equation: 
 
- <img src="https://render.githubusercontent.com/render/math?math=y = m  x %2b c"> 
+<img src="https://render.githubusercontent.com/render/math?math=y = m  x %2b c"> 
 
 You'll often come across greek letters talking about models like this. Another common way of writing a linear equation is ( <img src="https://render.githubusercontent.com/render/math?math=\beta"> is the Greek letter "beta"):
 
