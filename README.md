@@ -35,7 +35,7 @@ Independent and dependent variables are normally shown on a graph under a standa
 
 Conventionally, the independent variable goes on the x-axis, or the horizontal axis. Let's consider another example, one where we look at someone's income depending on their age. Below, you see a scatter plot where age is the independent variable, and income is the dependent variable. In this setting, **we want to study if age has some effect on annual income**.
 
-<img src ="images/scatter_age_income.png" width="500">
+<img src ="images/scatter_age_income.png">
 
 ## Statistical Model 
 
