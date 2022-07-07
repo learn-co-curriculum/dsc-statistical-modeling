@@ -1,10 +1,10 @@
 ---
 :lessons:
-- :id: 12629
-  :course_id: 343
-  :canvas_url: https://learning.flatironschool.com/courses/343/pages/dsc-stat-learning-theory
-  :type: page
 - :id: 22371
   :course_id: 466
   :canvas_url: https://my.learn.co/courses/466/assignments/22371
+  :type: assignment
+- :id: 195918
+  :course_id: 5825
+  :canvas_url: https://learning.flatironschool.com/courses/5825/assignments/195918
   :type: assignment
